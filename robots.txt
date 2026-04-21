@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lakecharlestreeservice.com/sitemap.xml
+Sitemap: https://contrabandbayoutree.com/sitemap.xml
