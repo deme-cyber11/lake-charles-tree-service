@@ -122,7 +122,7 @@
 
       var data = new FormData(form);
 
-      fetch('https://api.web3forms.com/submit', {
+      fetch('https://lead-manager-api.irontigerdigital.workers.dev/ingest', {
         method: 'POST',
         body: data
       })
