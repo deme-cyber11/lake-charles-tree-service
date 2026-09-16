@@ -108,41 +108,7 @@
     });
   }
 
-  /* --- Contact Form (Web3Forms) --- */
-  function initContactForm() {
-    var form = document.querySelector('#contact-form');
-    if (!form) return;
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      var btn = form.querySelector('button[type="submit"]');
-      var originalText = btn.textContent;
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-
-      var data = new FormData(form);
-
-      fetch('https://lead-manager-api.irontigerdigital.workers.dev/ingest', {
-        method: 'POST',
-        body: data
-      })
-      .then(function(res) { return res.json(); })
-      .then(function(result) {
-        if (result.success) {
-          window.location.href = 'thank-you.html';
-        } else {
-          btn.textContent = 'Error - Try Again';
-          btn.disabled = false;
-          setTimeout(function() { btn.textContent = originalText; }, 3000);
-        }
-      })
-      .catch(function() {
-        btn.textContent = 'Error - Try Again';
-        btn.disabled = false;
-        setTimeout(function() { btn.textContent = originalText; }, 3000);
-      });
-    });
-  }
+  /* Lead-form submission is handled by /js/form.js (shared ITD handler). */
 
   /* --- Initialize --- */
   document.addEventListener('DOMContentLoaded', function() {
@@ -150,6 +116,5 @@
     initHeader();
     initMobileNav();
     initFAQ();
-    initContactForm();
   });
 })();
