@@ -69,3 +69,4 @@ body.dm .btn--ghost-white:hover { background: rgba(255,255,255,.18) !important; 
   body.dm .container, body.dm .content-narrow { padding-left: 20px; padding-right: 20px; }
   body.dm .hero .container.hero-content { padding-left: 20px; padding-right: 20px; }
 }
+@media (max-width: 640px) { body.dm .page-hero { padding: 40px 0 28px; } body.dm .dm-hero-photo { margin-bottom: 8px; } }
