@@ -70,6 +70,12 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 .success a{color:#e94560;font-weight:600}
 .footer{text-align:center;padding:32px 16px;font-size:.8125rem;color:#94a3b8}
 .footer a{color:#e94560;font-weight:500}
+.topbar{position:sticky;top:0;z-index:100}.topbar .nav{position:relative}
+.subnav{display:flex;justify-content:center;gap:28px;background:#fff;border-bottom:1px solid #e2e8f0;padding:6px 16px;font-size:.9375rem;font-weight:600}
+.subnav a{color:#1e293b;display:inline-flex;align-items:center;min-height:44px}
+.subnav a:hover{color:#e94560}
+@media (hover:none){.nav__logo,.nav__cta{min-height:44px;display:inline-flex;align-items:center}.check-item{min-height:48px}.check-item input[type=checkbox]{height:40px;width:22px;min-width:22px}}
+@media (max-width:640px){.check-item label,.check-item span{font-size:.9375rem}.footer{font-size:.9375rem}.trust-item{font-size:.875rem}}
 </style>
 <!-- favicon + link preview (tools/link-preview-kit.py) -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -86,10 +92,13 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </head>
 <body>
 
+<div class="topbar">
 <nav class="nav">
-  <div class="nav__logo">Tree <span>Pro</span></div>
+  <a href="/" class="nav__logo">Contraband Bayou <span>Tree</span></a>
   <a href="tel:3375482811" class="nav__cta">(337) 548-2811</a>
 </nav>
+<nav class="subnav" aria-label="Site"><a href="/">Home</a><a href="/services/tree-removal.html">Services</a><a href="/contact.html">Contact</a></nav>
+</div>
 
 <main class="page">
 
@@ -343,7 +352,7 @@ textarea{resize:vertical;min-height:88px;line-height:1.6}
 </main>
 
 <div class="footer">
-  <p>&copy; 2026 Tree Service in Lake Charles, LA &nbsp;|&nbsp; Licensed &amp; Insured&nbsp;|&nbsp; <a href='tel:3375482811'>(337) 548-2811</a></p>
+  <p>&copy; 2026 Contraband Bayou Tree &nbsp;|&nbsp; Licensed &amp; Insured&nbsp;|&nbsp; <a href='tel:3375482811'>(337) 548-2811</a></p>
 </div>
 
 <script>

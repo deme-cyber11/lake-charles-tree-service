@@ -70,3 +70,21 @@ body.dm .btn--ghost-white:hover { background: rgba(255,255,255,.18) !important; 
   body.dm .hero .container.hero-content { padding-left: 20px; padding-right: 20px; }
 }
 @media (max-width: 640px) { body.dm .page-hero { padding: 40px 0 28px; } body.dm .dm-hero-photo { margin-bottom: 8px; } }
+
+/* Round 2 phone and tablet (2026-10-01). Touch sizing and phone text only, all inside media queries so desktop is unchanged. */
+@media (hover: none) {
+  body.dm .site-header .logo { min-height: 44px; }
+  body.dm .hamburger { min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+  body.dm .nav-links a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; justify-content: center; }
+  body.dm .header-phone { min-height: 44px; }
+  body.dm .breadcrumbs { padding-top: 4px; padding-bottom: 4px; }
+  body.dm .breadcrumbs a { min-height: 44px; min-width: 44px; display: inline-flex; align-items: center; }
+  body.dm .detail-text a[href^="tel:"], body.dm .content-narrow li > a[href^="tel:"] { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (max-width: 768px) {
+  /* the call and quote buttons were hidden until the visitor scrolled, so short pages had no call action on screen */
+  body.dm .floating-cta { transform: none; opacity: 1; pointer-events: auto; }
+}
+@media (max-width: 640px) {
+  body.dm .footer-bottom p, body.dm .pricing-note p { font-size: 15px; }
+}
