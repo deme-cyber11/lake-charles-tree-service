@@ -88,3 +88,34 @@ body.dm .btn--ghost-white:hover { background: rgba(255,255,255,.18) !important; 
 @media (max-width: 640px) {
   body.dm .footer-bottom p, body.dm .pricing-note p { font-size: 15px; }
 }
+
+/* Design check 2026-10-07. About page: these classes were used but never styled (text over a stray photo, a one-column list of tiny icons). */
+body.dm .about-content { padding: clamp(56px, 6vw, 88px) 0; }
+body.dm .about-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+body.dm .about-image img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--dm-radius); box-shadow: var(--dm-shadow-lg); }
+body.dm .why-choose { padding: clamp(56px, 6vw, 88px) 0; background: var(--dm-soft); }
+body.dm .features-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 36px; }
+body.dm .feature-card { background: #fff; border: 1px solid var(--dm-line); border-radius: var(--dm-radius); box-shadow: var(--dm-shadow); padding: 28px; }
+body.dm .feature-card .icon { width: 48px; height: 48px; border-radius: 12px; background: var(--dm-green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 16px; }
+body.dm .feature-card h3 { font-size: 1.15rem; margin: 0 0 8px; }
+body.dm .feature-card p { margin: 0; color: var(--dm-muted); line-height: 1.65; }
+/* Pricing cards: icon and "Most Requested" badge were unstyled */
+body.dm .pricing-card { position: relative; }
+body.dm .pricing-icon { width: 52px; height: 52px; margin: 0 auto 12px; border-radius: 14px; background: var(--dm-soft); color: var(--dm-green); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; }
+body.dm .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); padding: 4px 14px; border-radius: 999px; background: var(--dm-amber); color: #14281b; font-weight: 800; font-size: .78rem; letter-spacing: .04em; white-space: nowrap; }
+body.dm .pricing-note { margin-top: 20px; }
+/* Phone link inside a dark hero paragraph was dark green on dark green */
+body.dm .page-hero p a { color: var(--dm-amber); font-weight: 700; }
+/* Blog post hero meta (date, read time) was near-invisible; article body had no top spacing */
+body.dm .page-hero .article-meta { display: flex; flex-wrap: wrap; gap: 18px; color: rgba(255,255,255,.82); font-size: .95rem; }
+body.dm .page-hero .article-meta i { color: var(--dm-amber); margin-right: 4px; }
+body.dm .article-content { padding: clamp(40px, 5vw, 72px) 0; }
+body.dm .article-content .dm-hero-photo { display: block; max-width: 760px; margin: 28px 0; }
+/* FAQ page: the static question cards after the CTA had text flush against their border */
+body.dm .faq-item > h3, body.dm .faq-item > p { padding-left: 22px !important; padding-right: 22px !important; }
+body.dm .content-section .faq-item { margin-bottom: 14px; }
+@media (max-width: 900px) {
+  body.dm .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  body.dm .features-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 600px) { body.dm .features-grid { grid-template-columns: 1fr; } }
